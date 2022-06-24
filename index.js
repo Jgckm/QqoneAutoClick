@@ -1,8 +1,61 @@
+// ==UserScript==
+// @name         QqoneAutoClick
+// @namespace    http://tampermonkey.net/
+// @version      0.1
+// @updateURL    https://raw.githubusercontent.com/jgckM/QqoneAutoClick/main/index.js
+// @downloadURL  https://raw.githubusercontent.com/jgckM/QqoneAutoClick/main/index.js
+// @description  try to take over the world!
+// @author       jgckM
+// @match        *://user.qzone.qq.com/*
+// @icon         https://www.google.com/s2/favicons?sz=64&domain=0.1
+// @grant        none
+// ==/UserScript==
 (function () {
     let style = document.createElement('style');
     let body = document.querySelector('body');
-    style.innerHTML =
-        '.box{position:fixed;top:200px;left:10px;min-width:100px;max-width:200px;width:auto;padding:10px;display:flex;justify-content:center;align-items:center;box-shadow:none;border-radius:10px;border:1px solid #a0a0a0;background-color:#f7f7f9;transition:left 0.3s cubic-bezier(0.03,0.21,0,1.32)}.box label{font-size:18px}.box input{border:1px solid #a0a0a0;outline:none;min-width:40px;border-radius:5px;max-width:60px}.box button{border-radius:5px;border-width:1px;width:50px}.box .toggle{font-size:14px;text-align:center;position:absolute;right:-20px;width:20px;height:40px;background-color:darkgray;border-radius:5px}';
+    style.innerHTML = `.box {
+        position: fixed;
+        top: 200px;
+        left: 10px;
+        min-width: 100px;
+        max-width: 200px;
+        width: auto;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: none;
+        border-radius: 10px;
+        border: 1px solid #a0a0a0;
+        background-color: #f7f7f9;
+        transition: left 0.3s cubic-bezier(0.03, 0.21, 0, 1.32);
+    }
+    .box label {
+        font-size: 18px;
+    }
+    .box input {
+        border: 1px solid #a0a0a0;
+        outline: none;
+        min-width: 40px;
+        border-radius: 5px;
+        max-width: 60px;
+    }
+    .box button {
+        border-radius: 5px;
+        border-width: 1px;
+        width: 50px;
+    }
+    .box .toggle {
+        font-size: 14px;
+        text-align: center;
+        position: absolute;
+        right: -20px;
+        width: 20px;
+        height: 40px;
+        background-color: darkgray;
+        border-radius: 5px;
+    }
+    `;
     body.appendChild(style);
 })();
 
@@ -22,12 +75,12 @@ window.addEventListener('load', function () {
 <div class="toggle">收起</div>`;
     body.appendChild(box);
 
-    // function Removeiframe() {
-    //     let iframes = document.querySelectorAll('iframe');
-    //     iframes.forEach(function (iframe) {
-    //         iframe.remove();
-    //     });
-    // }
+    function Removeiframe() {
+        let iframes = document.querySelectorAll('iframe');
+        iframes.forEach(function (iframe) {
+            iframe.remove();
+        });
+    }
 
     let start = document.querySelector('.box .start');
     let clicknum = document.querySelector('.box .clicknum');
