@@ -2,7 +2,7 @@
 
 > 一个懒人必备的 QQ 空间点赞工具
 
-[![jPYMaq.md.png](https://s1.ax1x.com/2022/06/23/jPYMaq.md.png)](https://imgtu.com/i/jPYMaq)
+![](images/jPYMaq.md.png)
 
 #### 使用方法
 
