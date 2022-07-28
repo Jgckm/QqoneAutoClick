@@ -6,7 +6,7 @@
 
 #### 使用方法
 
-1.安装脚本
+1.[安装脚本](https://greasyfork.org/zh-CN/scripts/446914-qqoneautoclick)
 
 2.打开[QQ 空间](https://user.qzone.qq.com/)
 
